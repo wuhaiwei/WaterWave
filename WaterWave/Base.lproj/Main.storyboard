@@ -1,21 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nrr-wd-8B5"/>
+                        <viewControllerLayoutGuide type="bottom" id="n5J-zE-xNm"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="32Q-za-oL8" customClass="WaterWave">
+                                <rect key="frame" x="0.0" y="258.5" width="375" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="536-aP-r8K"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rlf-8f-aRc">
+                                <rect key="frame" x="90" y="468.5" width="32" height="30"/>
+                                <state key="normal" title="start"/>
+                                <connections>
+                                    <action selector="startWave:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ixc-yn-I69"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htk-sS-IKp">
+                                <rect key="frame" x="243" y="468.5" width="42" height="30"/>
+                                <state key="normal" title="pause"/>
+                                <connections>
+                                    <action selector="pauseWave:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i2j-PI-mGx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="htk-sS-IKp" firstAttribute="centerY" secondItem="Rlf-8f-aRc" secondAttribute="centerY" id="7vn-4Q-8uV"/>
+                            <constraint firstAttribute="trailing" secondItem="32Q-za-oL8" secondAttribute="trailing" id="9be-n9-xkd"/>
+                            <constraint firstAttribute="trailing" secondItem="htk-sS-IKp" secondAttribute="trailing" constant="90" id="JPq-L0-PCm"/>
+                            <constraint firstItem="32Q-za-oL8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LWG-Lo-QTU"/>
+                            <constraint firstItem="Rlf-8f-aRc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="90" id="jUj-ws-S1I"/>
+                            <constraint firstItem="Rlf-8f-aRc" firstAttribute="top" secondItem="32Q-za-oL8" secondAttribute="bottom" constant="60" id="kI1-8y-V3M"/>
+                            <constraint firstItem="32Q-za-oL8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="z44-GM-7Bf"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="waveView" destination="32Q-za-oL8" id="0gn-6l-iXH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -2,27 +2,27 @@
 //  ViewController.m
 //  WaterWave
 //
-//  Created by hu on 2018/8/7.
+//  Created by wu on 2018/8/7.
 //  Copyright © 2018年 wu. All rights reserved.
 //
 
 #import "ViewController.h"
+#import "WaterWave.h"
 
 @interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet WaterWave *waveView;
 
 @end
 
 @implementation ViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+#pragma mark - event
+- (IBAction)startWave:(id)sender {
+    [self. waveView startWave];
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)pauseWave:(id)sender {
+    [self.waveView pauseWave];
 }
 
 

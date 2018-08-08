@@ -15,6 +15,7 @@
 		851C906D2119A223001E1580 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 851C906C2119A223001E1580 /* main.m */; };
 		851C90772119A223001E1580 /* WaterWaveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 851C90762119A223001E1580 /* WaterWaveTests.m */; };
 		851C90822119A223001E1580 /* WaterWaveUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 851C90812119A223001E1580 /* WaterWaveUITests.m */; };
+		851C90912119A3F7001E1580 /* WaterWave.m in Sources */ = {isa = PBXBuildFile; fileRef = 851C90902119A3F7001E1580 /* WaterWave.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		851C907D2119A223001E1580 /* WaterWaveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaterWaveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		851C90812119A223001E1580 /* WaterWaveUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterWaveUITests.m; sourceTree = "<group>"; };
 		851C90832119A223001E1580 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		851C908F2119A3F7001E1580 /* WaterWave.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaterWave.h; sourceTree = "<group>"; };
+		851C90902119A3F7001E1580 /* WaterWave.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterWave.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				851C905E2119A223001E1580 /* AppDelegate.m */,
 				851C90602119A223001E1580 /* ViewController.h */,
 				851C90612119A223001E1580 /* ViewController.m */,
+				851C908F2119A3F7001E1580 /* WaterWave.h */,
+				851C90902119A3F7001E1580 /* WaterWave.m */,
 				851C90632119A223001E1580 /* Main.storyboard */,
 				851C90662119A223001E1580 /* Assets.xcassets */,
 				851C90682119A223001E1580 /* LaunchScreen.storyboard */,
@@ -265,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				851C90912119A3F7001E1580 /* WaterWave.m in Sources */,
 				851C90622119A223001E1580 /* ViewController.m in Sources */,
 				851C906D2119A223001E1580 /* main.m in Sources */,
 				851C905F2119A223001E1580 /* AppDelegate.m in Sources */,
